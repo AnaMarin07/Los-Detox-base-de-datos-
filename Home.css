@@ -1,0 +1,134 @@
+html {
+        scroll-behavior: smooth; /*deslizar cn aura*/
+    }
+body {
+    font-family: Arial;
+    margin: 0;
+    background: #cacaca;
+}
+
+header {
+    background: #000000;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+nav {
+    background: #333;
+    padding: 10px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+}
+
+nav a {
+    color: rgb(255, 255, 255);
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #a0a0a0;
+}
+
+section {
+    padding: 40px 20px;
+    margin: 20px;
+    background: rgb(250, 250, 250);
+    border-radius: 10px;
+}
+.banner-container {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    line-height: 0; /* Quita espacios fantasmas debajo de la foto */
+}
+
+.banner-container img {
+    width: 100%;
+    height: auto;
+    max-height: 300px; /* Ajustá esto según qué tan alto quieras el banner */
+    object-fit: cover; /* Evita que la foto se estire feo */
+}
+
+.cards {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    color: #ffffff;
+}
+
+.boton {
+        background-color: rgb(66, 12, 12);
+        color: rgb(255, 255, 255);
+        border: none;
+        padding: 12px 28px;
+        border-radius: 10px;
+        font-weight: bold;
+        font-size: 16px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+.marca-item {
+    position: relative;
+    display: inline-block;
+    margin: 15px;
+    overflow: visible;
+}
+
+.btn-marca {
+    background-color: #000;
+    color: #fff;
+    border: 8px solid #000;
+    border-radius: 15px; /*ESTA PORONGA ES LA Q CAMBIA LOS BORDESSS*/
+    padding: 15px 25px;
+    font-size: 14px;
+    font-weight: 900;
+    text-transform: uppercase; /* Todo a mayúsculas le da autoridad */
+    letter-spacing: 2px;      /* Espaciado entre letras pro */
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.foto-hover {
+    position: absolute;
+    bottom: 120%; /* Aparece arriba del botón */
+    left: 50%;
+    transform: translateX(-50%); /* La centra perfectamente */
+    width: 150px; /* Tamaño de la miniatura */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    
+    opacity: 0; /* Invisible por defecto */
+    visibility: hidden;
+    transition: all 0.4s ease; /* Efecto suave de aparición */
+    pointer-events: none; /* Para que la foto no moleste al querer hacer click */
+    z-index: 10;
+}
+
+.marca-item:hover .foto-hover {
+    opacity: 1; /* Se vuelve visible */
+    visibility: visible;
+    bottom: 110%; /* Sube un poquito al aparecer (efecto dinámico) */
+}    
+.iconos_redes_S {
+    display: flex;
+    flex-direction:row; /* La clave para que bajen en fila india */
+    align-items: center;
+    gap: 10px;              /* El espacio entre cada icono */
+    margin-top: 20px;
+}
+
+
+
+footer {
+        background: #111;
+        display: flex;
+        justify-content: space-between;
+        color: white;
+        padding: 40px;
+
+    }
